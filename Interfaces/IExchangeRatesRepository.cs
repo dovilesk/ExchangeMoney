@@ -6,6 +6,6 @@ namespace Repositories
     public interface IExchangeRatesRepository
     {
         List<ExchangeRateDto> getAllExchangeRates();
-        ExchangeRateDto getExchangeRateByISO(string ISO);
+        ExchangeRateDto GetExchangeRateByISO(string ISO);
     }
 }

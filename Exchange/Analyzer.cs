@@ -16,9 +16,9 @@ namespace Exchange
         public Analyzer(string[] args)
         {
             if (HasParameters(args) && CurrencyPairFormatIsCorrect(args[1])) {
-                _currentCurrency = getCurrentCurrency(args[1]);
-                _currencyExchangeTo = getCurrencyExchangeTo(args[1]);
-                _amount = getAmount(args[2]);
+                _currentCurrency = GetCurrentCurrency(args[1]);
+                _currencyExchangeTo = GetCurrencyExchangeTo(args[1]);
+                _amount = GetAmount(args[2]);
 
                 CurrentCurrency = _currentCurrency;
                 CurrencyExchangeTo = _currencyExchangeTo;
@@ -46,17 +46,17 @@ namespace Exchange
             return true;
         }
 
-        private string getCurrentCurrency(string currencies)
+        private string GetCurrentCurrency(string currencies)
         {
             return currencies.Split("/")[0].ToUpper(); 
         }
 
-        private string getCurrencyExchangeTo(string currencies)
+        private string GetCurrencyExchangeTo(string currencies)
         {
             return currencies.Split("/")[1].ToUpper(); ;
         }
 
-        private decimal getAmount(string amount)
+        private decimal GetAmount(string amount)
         {
             decimal amountInDouble = 0;
 

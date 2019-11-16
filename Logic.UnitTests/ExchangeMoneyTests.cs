@@ -25,13 +25,13 @@ namespace Logic.UnitTests
             _stubExchangeRatesRepository = Substitute.For<IExchangeRatesRepository>();
 
             ExchangeRateDto exchangeRateEUR = createExchangeRate("Euro", "EUR", 100, 500m);
-            _stubExchangeRatesRepository.getExchangeRateByISO("EUR").Returns(exchangeRateEUR);
+            _stubExchangeRatesRepository.GetExchangeRateByISO("EUR").Returns(exchangeRateEUR);
 
             ExchangeRateDto exchangeRateUSD = createExchangeRate("Amerikanske dollar", "USD", 100, 600m);
-            _stubExchangeRatesRepository.getExchangeRateByISO("USD").Returns(exchangeRateUSD);
+            _stubExchangeRatesRepository.GetExchangeRateByISO("USD").Returns(exchangeRateUSD);
 
             ExchangeRateDto exchangeRateJPY = createExchangeRate("Japanske yen", "JPY", 100, 500m);
-            _stubExchangeRatesRepository.getExchangeRateByISO("JPY").Returns(exchangeRateJPY);
+            _stubExchangeRatesRepository.GetExchangeRateByISO("JPY").Returns(exchangeRateJPY);
 
         }
 

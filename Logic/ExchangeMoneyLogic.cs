@@ -34,7 +34,7 @@ namespace Logic
         {
             decimal oneUnitValue = 0;
 
-            ExchangeRateDto currencyCurrencyValues = _exchangeRatesRepository.getExchangeRateByISO(currencyExchangeFrom);
+            ExchangeRateDto currencyCurrencyValues = _exchangeRatesRepository.GetExchangeRateByISO(currencyExchangeFrom);
 
             oneUnitValue = decimal.Divide(currencyCurrencyValues.RateOfCurrency, 100);
 
