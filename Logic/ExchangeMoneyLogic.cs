@@ -19,11 +19,11 @@ namespace Logic
 
             if (currencyExchangeTo == Currencies.DDK.ToString())
             {
-                amountWithNewCurrency = amount * ValueOfOneUnitOfCurrencyToDDK(currencyExchangeFrom);
+                amountWithNewCurrency = decimal.Multiply(amount, ValueOfOneUnitOfCurrencyToDDK(currencyExchangeFrom));
             }
             else
             {
-                amountWithNewCurrency = amount * ValueOfOneUnitExchangeTo(currencyExchangeFrom, currencyExchangeTo);
+                amountWithNewCurrency = decimal.Multiply(amount,ValueOfOneUnitExchangeTo(currencyExchangeFrom, currencyExchangeTo));
             }
 
             return (decimal)System.Math.Round(amountWithNewCurrency, 4);
@@ -36,7 +36,7 @@ namespace Logic
 
             ExchangeRateDto currencyCurrencyValues = _exchangeRatesRepository.getExchangeRateByISO(currencyExchangeFrom);
 
-            oneUnitValue = (currencyCurrencyValues.RateOfCurrency / 100);
+            oneUnitValue = decimal.Divide(currencyCurrencyValues.RateOfCurrency, 100);
 
             return oneUnitValue;
         }
@@ -45,7 +45,7 @@ namespace Logic
         {
             decimal oneUnitValue = 0;
 
-            oneUnitValue = ValueOfOneUnitOfCurrencyToDDK(currencyExchangeTo) / ValueOfOneUnitOfCurrencyToDDK(currentExchangeFrom);
+            oneUnitValue = decimal.Divide(ValueOfOneUnitOfCurrencyToDDK(currencyExchangeTo), ValueOfOneUnitOfCurrencyToDDK(currentExchangeFrom));
 
             return oneUnitValue;
         }
