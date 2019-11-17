@@ -10,18 +10,19 @@ If a currency pair has the same ISO currency as both main and money, then the pa
 If a currency pair contains an unknown currency, then an appropriate error message should be written to console.
 
 ## Exchange Rates
-Currency	ISO	Amount
-Euro	EUR	743,94
-Amerikanske dollar	USD	663,11
-Britiske pund	GBP	852,85
-Svenske kroner	SEK	76,10
-Norske kroner	NOK	78,40
-Schweiziske franc	CHF	683,58
-Japanske yen	JPY	5,9740
+Currency	ISO	Amount<br/>
+Euro	EUR	743,94<br/>
+Amerikanske dollar	USD	663,11<br/>
+Britiske pund	GBP	852,85<br/>
+Svenske kroner	SEK	76,10<br/>
+Norske kroner	NOK	78,40<br/>
+Schweiziske franc	CHF	683,58<br/>
+Japanske yen	JPY	5,9740<br/><br/>
 
 ## Console App runs
 Exchange EUR/DDK 1
 7,4394
 
 
-Implemented with C#, Unit Testing, .NET Core Console App, TDD
+## Implemented 
+with C#, Unit Testing, .NET Core Console App, TDD
