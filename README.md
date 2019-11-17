@@ -20,7 +20,7 @@ Schweiziske franc	CHF	683,58<br/>
 Japanske yen	JPY	5,9740<br/><br/>
 
 ## Console App runs
-Exchange EUR/DDK 1
+Exchange EUR/DDK 1<br/>
 7,4394
 
 
