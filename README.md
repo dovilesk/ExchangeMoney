@@ -25,4 +25,4 @@ Exchange EUR/DDK 1<br/>
 
 
 ## Implemented 
-with C#, Unit Testing, .NET Core Console App, TDD
+with C#, Unit Testing, .NET Core Console App, TDD, DI
